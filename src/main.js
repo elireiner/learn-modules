@@ -1,3 +1,3 @@
-import handleJquery from './index.js'
+import handleJquery from './jquery.js'
 
 handleJquery()
