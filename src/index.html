@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Explore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main>
+        <section class="search">
+            <nav></nav>
+            <header class="header">
+                <h1>News and weather</h1>
+            </header>
+            <div class="form-wrapper">
+                <p class="travel-question">You're traveling to?</p>
+                <form class="form">
+                    <div class="white">
+                        <label for="city">City</label>
+                        <input type="text" id="city" placeholder="e.g. Palo Alto" required>
+                    </div>
+
+                    <div class="white">
+                        <label for="state">State</label>
+                        <input type="text" id="state" placeholder="e.g. California" required>
+                    </div>
+                    <div class="container">
+                        <div class="white-country">
+                            <label for="country">State</label>
+                            <input class="input country-input" value="" id="country" type="text" />
+                        </div>
+                        <ul id='country-list'>
+                            <li id="US">United States</li>
+                            <li id="AF">Afghanistan</li>
+                            <li id="AX">Åland Islands</li>
+                            <li id="AL">Albania</li>
+                            <li id="DZ">Algeria</li>
+                            <li id="AS">American Samoa</li>
+                            <li id="AD">Andorra</li>
+                            <li id="AO">Angola</li>
+                            <li id="AI">Anguilla</li>
+                            <li id="AQ">Antarctica</li>
+                            <li id="AG">Antigua and Barbuda</li>
+                            <li id="AR">Argentina</li>
+                            <li id="AM">Armenia</li>
+                            <li id="AW">Aruba</li>
+                            <li id="AU">Australia</li>
+                            <li id="AT">Austria</li>
+                            <li id="AZ">Azerbaijan</li>
+                            <li id="BS">Bahamas</li>
+                            <li id="BH">Bahrain</li>
+                            <li id="BD">Bangladesh</li>
+                            <li id="BB">Barbados</li>
+                            <li id="BY">Belarus</li>
+                            <li id="BE">Belgium</li>
+                            <li id="BZ">Belize</li>
+                            <li id="BJ">Benin</li>
+                            <li id="BM">Bermuda</li>
+                            <li id="BT">Bhutan</li>
+                            <li id="BO">Bolivia, Plurinational State of</li>
+                            <li id="BQ">Bonaire, Sint Eustatius and Saba</li>
+                            <li id="BA">Bosnia and Herzegovina</li>
+                        </ul>
+                        <button>explore</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+        <section class="results">
+            <h2>Here are your results</h2>
+            <section id="js-weather-results" class="weather-results">
+                <h3>The weather</h3>
+                <p id="js-error-message-weather" class="error-message"></p>
+                <div id="js-hide">
+                    <div class="buttons-div">
+                        <button id="js-c" class="c">C°</button>
+                        <button id="js-f" class="f">F°</button>
+                    </div>
+
+                    <div class="weather-description">
+                        <p class="description-day">Day</p>
+                        <p class="high-low">High/Low</p>
+                    </div>
+                </div>
+
+                <div id="js-weather-results-I">
+                </div>
+                <div id="js-weather-results-M">
+                </div>
+            </section>
+            <section id="js-news-results" class="news-results">
+                <h3>The news</h3>
+                <p>We're working on bringing you the news. Stay tuned...</p>
+                <p id="js-error-message-news" class="error-message"></p>
+                <ul id="js-news-results-list">
+                </ul>
+            </section>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
