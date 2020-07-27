@@ -1,4 +1,4 @@
-//import config from './config'
+import config from './config'
 
 
 'use strict'
@@ -77,11 +77,9 @@ function formatQueryParams(params) {
         .map(key => `${key}=${params[key]}`)
     return queryItems.join('&');
 }
-//console.log(config.WEATHER_API_ENDPOINT)
-let weatherBaseUrl = 'https://api.weatherbit.io/v2.0/forecast/daily?'
-//config.WEATHER_API_ENDPOINT
 
-let weatherApiKey = '5ae81936c8514eacb8ef228b49c7eaa4';
+let weatherBaseUrl = config.WEATHER_API_ENDPOINT;
+let weatherApiKey = config.API_KEY;
 
 function getWeather(cityState, unitType) {
     let params = {
@@ -109,7 +107,7 @@ function getWeather(cityState, unitType) {
 
 //replace with new api
 let newsBaseUrl = 'https://newsapi.org/v2/'
-let newsApiKey = '832ecf1cdf9741c19ffe553820ed8d60';
+let newsApiKey = '';
 
 function getNews(searchType, params) {
     let queryString = formatQueryParams(params);
